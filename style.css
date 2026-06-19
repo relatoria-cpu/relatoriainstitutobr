@@ -1,0 +1,675 @@
+/* ============================================================
+   SISTEMA DE COLETA DE EVIDÊNCIAS — INSTITUTO BR ARTE
+   Folha de Estilo Institucional v1.0
+   ============================================================ */
+
+/* ---- Variáveis de Design ---- */
+:root {
+  --azul-principal:    #1F3864;
+  --azul-medio:        #2C5282;
+  --azul-claro:        #EBF0F8;
+  --azul-borda:        #C2D0E8;
+  --cinza-fundo:       #F4F6F9;
+  --cinza-borda:       #D1D9E6;
+  --cinza-medio:       #8796A9;
+  --branco:            #FFFFFF;
+  --texto-principal:   #1A202C;
+  --texto-secundario:  #4A5568;
+  --texto-leve:        #718096;
+  --sucesso-fundo:     #EBF7F0;
+  --sucesso-texto:     #1A5C35;
+  --sucesso-borda:     #6FCF97;
+  --erro-fundo:        #FEF0EE;
+  --erro-texto:        #9B2335;
+  --erro-borda:        #E57373;
+  --aviso-fundo:       #FFFBEA;
+  --aviso-texto:       #744210;
+  --aviso-borda:       #F6AD55;
+  --font-sans:         'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --font-mono:         'IBM Plex Mono', 'Courier New', monospace;
+  --sombra-card:       0 2px 8px rgba(31, 56, 100, 0.08);
+  --sombra-hover:      0 4px 16px rgba(31, 56, 100, 0.14);
+  --radius:            6px;
+  --radius-grande:     10px;
+  --transicao:         0.18s ease;
+}
+
+/* ---- Reset Básico ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--cinza-fundo);
+  color: var(--texto-principal);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================================
+   CABEÇALHO
+   ============================================================ */
+.site-header {
+  background-color: var(--azul-principal);
+  color: var(--branco);
+  border-bottom: 4px solid var(--azul-medio);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+
+.header-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-logo {
+  flex-shrink: 0;
+}
+
+.logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-text-main {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.logo-text-cnpj {
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  opacity: 0.75;
+  letter-spacing: 0.02em;
+}
+
+.header-titulo {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid rgba(255,255,255,0.25);
+  padding-left: 20px;
+}
+
+.header-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  opacity: 0.95;
+}
+
+.header-sub {
+  font-size: 0.72rem;
+  opacity: 0.65;
+  letter-spacing: 0.02em;
+  margin-top: 2px;
+}
+
+/* ============================================================
+   ÁREA PRINCIPAL
+   ============================================================ */
+.main-content {
+  flex: 1;
+  padding: 32px 16px 48px;
+}
+
+.form-wrapper {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   TÍTULO DO FORMULÁRIO
+   ============================================================ */
+.form-title-area {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.form-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--azul-principal);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.form-subtitle {
+  font-size: 0.9rem;
+  color: var(--texto-leve);
+  margin-top: 6px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   CAIXA DE ORIENTAÇÃO
+   ============================================================ */
+.orientacao-box {
+  background-color: var(--azul-claro);
+  border: 1px solid var(--azul-borda);
+  border-left: 4px solid var(--azul-principal);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 28px;
+}
+
+.orientacao-texto {
+  font-size: 0.875rem;
+  color: var(--azul-principal);
+  line-height: 1.65;
+}
+
+/* ============================================================
+   BLOCOS DO FORMULÁRIO
+   ============================================================ */
+.bloco {
+  background: var(--branco);
+  border: 1px solid var(--cinza-borda);
+  border-radius: var(--radius-grande);
+  margin-bottom: 24px;
+  box-shadow: var(--sombra-card);
+  overflow: hidden;
+}
+
+.bloco-header {
+  background-color: var(--azul-principal);
+  color: var(--branco);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.bloco-numero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  flex-shrink: 0;
+}
+
+.bloco-titulo {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.bloco-corpo {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ============================================================
+   CAMPOS
+   ============================================================ */
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.campo-grupo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.campo-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--texto-principal);
+  line-height: 1.4;
+}
+
+.obrigatorio {
+  color: #C53030;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.campo-ajuda {
+  font-size: 0.8rem;
+  color: var(--texto-leve);
+  line-height: 1.5;
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+
+.campo-input,
+.campo-select,
+.campo-textarea {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--texto-principal);
+  background-color: var(--branco);
+  border: 1px solid var(--cinza-borda);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  transition: border-color var(--transicao), box-shadow var(--transicao);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.campo-input:focus,
+.campo-select:focus,
+.campo-textarea:focus {
+  outline: none;
+  border-color: var(--azul-medio);
+  box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.15);
+}
+
+.campo-input::placeholder,
+.campo-textarea::placeholder {
+  color: var(--cinza-medio);
+  font-size: 0.85rem;
+}
+
+.campo-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238796A9' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.campo-textarea {
+  resize: vertical;
+  min-height: 80px;
+  line-height: 1.6;
+}
+
+/* Campo em estado de erro */
+.campo-input.campo-invalido,
+.campo-select.campo-invalido,
+.campo-textarea.campo-invalido {
+  border-color: var(--erro-borda);
+  background-color: var(--erro-fundo);
+}
+
+.campo-erro {
+  font-size: 0.78rem;
+  color: var(--erro-texto);
+  font-weight: 500;
+  min-height: 18px;
+  display: block;
+}
+
+/* Campos de evidência — destaque visual */
+.campo-evidencia {
+  border-left: 3px solid var(--azul-borda);
+  padding-left: 12px;
+  background-color: #FAFBFE;
+}
+
+.campo-evidencia:focus {
+  border-left-color: var(--azul-medio);
+  background-color: var(--branco);
+}
+
+/* ============================================================
+   CAMPOS RADIO
+   ============================================================ */
+.campo-radio-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--cinza-fundo);
+}
+
+.campo-radio-grupo:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.radio-opcoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: 4px;
+}
+
+.radio-opcao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--texto-principal);
+  cursor: pointer;
+  padding: 6px 14px;
+  border: 1px solid var(--cinza-borda);
+  border-radius: 20px;
+  transition: all var(--transicao);
+  user-select: none;
+}
+
+.radio-opcao:hover {
+  border-color: var(--azul-medio);
+  background-color: var(--azul-claro);
+}
+
+.radio-opcao input[type="radio"] {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--azul-principal);
+  cursor: pointer;
+}
+
+.radio-opcao:has(input:checked) {
+  border-color: var(--azul-principal);
+  background-color: var(--azul-claro);
+  font-weight: 500;
+}
+
+/* ============================================================
+   AVISO DE EVIDÊNCIA
+   ============================================================ */
+.aviso-evidencia {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--aviso-texto);
+  background-color: var(--aviso-fundo);
+  border: 1px solid var(--aviso-borda);
+  border-left: 4px solid var(--aviso-borda);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+}
+
+/* ============================================================
+   ÁREA DE ENVIO
+   ============================================================ */
+.envio-area {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.envio-lembrete {
+  font-size: 0.85rem;
+  color: var(--texto-secundario);
+  text-align: center;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.btn-enviar {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--branco);
+  background-color: var(--azul-principal);
+  border: none;
+  border-radius: var(--radius);
+  padding: 14px 48px;
+  cursor: pointer;
+  transition: background-color var(--transicao), box-shadow var(--transicao), transform var(--transicao);
+  box-shadow: 0 2px 8px rgba(31, 56, 100, 0.25);
+  min-width: 220px;
+}
+
+.btn-enviar:hover {
+  background-color: var(--azul-medio);
+  box-shadow: var(--sombra-hover);
+  transform: translateY(-1px);
+}
+
+.btn-enviar:active {
+  transform: translateY(0);
+}
+
+.btn-enviar:disabled {
+  background-color: var(--cinza-medio);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Estado de carregamento */
+.btn-enviar.carregando {
+  background-color: var(--cinza-medio);
+  cursor: not-allowed;
+}
+
+/* ============================================================
+   ERRO GERAL
+   ============================================================ */
+.erro-geral {
+  background-color: var(--erro-fundo);
+  border: 1px solid var(--erro-borda);
+  border-radius: var(--radius);
+  padding: 14px 20px;
+  font-size: 0.875rem;
+  color: var(--erro-texto);
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* ============================================================
+   MENSAGENS PÓS-ENVIO
+   ============================================================ */
+.msg-sucesso,
+.msg-erro-envio {
+  background: var(--branco);
+  border-radius: var(--radius-grande);
+  padding: 48px 32px;
+  text-align: center;
+  box-shadow: var(--sombra-card);
+  border: 1px solid var(--cinza-borda);
+}
+
+.msg-sucesso {
+  border-top: 5px solid var(--sucesso-borda);
+}
+
+.msg-erro-envio {
+  border-top: 5px solid var(--erro-borda);
+}
+
+.msg-icone {
+  font-size: 3rem;
+  color: var(--sucesso-texto);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.msg-icone-erro {
+  font-size: 3rem;
+  color: var(--erro-texto);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.msg-titulo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--sucesso-texto);
+  margin-bottom: 12px;
+}
+
+.msg-titulo-erro {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--erro-texto);
+  margin-bottom: 12px;
+}
+
+.msg-texto {
+  font-size: 0.9rem;
+  color: var(--texto-secundario);
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto 16px;
+}
+
+.msg-texto-erro {
+  font-size: 0.9rem;
+  color: var(--erro-texto);
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto 16px;
+}
+
+.msg-id {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--texto-leve);
+  background-color: var(--cinza-fundo);
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.btn-novo-envio,
+.btn-tentar-novamente {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--branco);
+  background-color: var(--azul-principal);
+  border: none;
+  border-radius: var(--radius);
+  padding: 12px 32px;
+  cursor: pointer;
+  transition: background-color var(--transicao);
+  margin-top: 8px;
+}
+
+.btn-novo-envio:hover,
+.btn-tentar-novamente:hover {
+  background-color: var(--azul-medio);
+}
+
+/* ============================================================
+   RODAPÉ
+   ============================================================ */
+.site-footer {
+  background-color: var(--azul-principal);
+  color: rgba(255,255,255,0.65);
+  padding: 20px 24px;
+  margin-top: auto;
+}
+
+.footer-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-inner p {
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  line-height: 1.8;
+}
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+@media (max-width: 640px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 16px;
+  }
+
+  .header-titulo {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 8px;
+    width: 100%;
+  }
+
+  .main-content {
+    padding: 20px 12px 40px;
+  }
+
+  .bloco-corpo {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .campo-grupo {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .radio-opcoes {
+    gap: 8px;
+  }
+
+  .radio-opcao {
+    font-size: 0.85rem;
+    padding: 5px 12px;
+  }
+
+  .form-title {
+    font-size: 1.1rem;
+  }
+
+  .btn-enviar {
+    width: 100%;
+    padding: 14px 24px;
+  }
+
+  .msg-sucesso,
+  .msg-erro-envio {
+    padding: 32px 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .campo-input,
+  .campo-select,
+  .campo-textarea {
+    font-size: 0.85rem;
+  }
+
+  .bloco-titulo {
+    font-size: 0.85rem;
+  }
+}

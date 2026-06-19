@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulário de Envio de Evidências — Instituto BR Arte">
+  <title>Formulário de Evidências — Instituto BR Arte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO INSTITUCIONAL -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <img src="logo.png" alt="Instituto BR Arte" class="logo-img" onerror="this.style.display='none'; document.getElementById('logo-text').style.display='block';">
+        <div id="logo-text" class="logo-text" style="display:none;">
+          <span class="logo-text-main">INSTITUTO BR ARTE</span>
+          <span class="logo-text-cnpj">CNPJ: 26.757.702/0001-08</span>
+        </div>
+      </div>
+      <div class="header-titulo">
+        <span class="header-label">Sistema de Coleta de Evidências</span>
+        <span class="header-sub">Transferegov · MROSC · Emendas Parlamentares</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ÁREA PRINCIPAL -->
+  <main class="main-content">
+    <div class="form-wrapper">
+
+      <!-- TÍTULO DO FORMULÁRIO -->
+      <div class="form-title-area">
+        <h1 class="form-title">FORMULÁRIO DE ENVIO DE EVIDÊNCIAS</h1>
+        <p class="form-subtitle">INSTITUTO BR ARTE</p>
+      </div>
+
+      <!-- ORIENTAÇÃO GERAL -->
+      <div class="orientacao-box">
+        <p class="orientacao-texto">
+          Este formulário deve ser preenchido <strong>uma vez para cada atividade executada</strong>.
+          Não coloque várias oficinas, reuniões, aulas ou ações no mesmo envio.
+          Cada atividade precisa ter data, local, descrição e evidências próprias.
+          Se uma evidência não existir, informe <strong>"Pendente"</strong>.
+          Se não se aplicar à atividade, informe <strong>"Não se aplica"</strong>.
+        </p>
+      </div>
+
+      <!-- FORMULÁRIO -->
+      <form id="form-evidencias" novalidate>
+
+        <!-- ==================================================== -->
+        <!-- BLOCO 0 — CONTROLE DE ACESSO                         -->
+        <!-- ==================================================== -->
+        <section class="bloco">
+          <div class="bloco-header">
+            <span class="bloco-numero">0</span>
+            <h2 class="bloco-titulo">Controle de Acesso</h2>
+          </div>
+          <div class="bloco-corpo">
+
+            <div class="campo">
+              <label class="campo-label" for="codigo_acesso">
+                Código de acesso <span class="obrigatorio">*</span>
+              </label>
+              <p class="campo-ajuda">Digite o código informado pela equipe do Instituto BR Arte.</p>
+              <input type="text" id="codigo_acesso" name="codigo_acesso"
+                     class="campo-input" required autocomplete="off"
+                     placeholder="Código de acesso">
+              <span class="campo-erro" id="erro-codigo_acesso"></span>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ==================================================== -->
+        <!-- BLOCO 1 — IDENTIFICAÇÃO DO RESPONSÁVEL               -->
+        <!-- ==================================================== -->
+        <section class="bloco">
+          <div class="bloco-header">
+            <span class="bloco-numero">1</span>
+            <h2 class="bloco-titulo">Identificação do Responsável</h2>
+          </div>
+          <div class="bloco-corpo">
+
+            <div class="campo">
+              <label class="campo-label" for="responsavel_envio">
+                Nome do responsável pelo envio <span class="obrigatorio">*</span>
+              </label>
+              <p class="campo-ajuda">Escreva seu nome completo.</p>
+              <input type="text" id="responsavel_envio" name="responsavel_envio"
+                     class="campo-input" required placeholder="Nome completo">
+              <span class="campo-erro" id="erro-responsavel_envio"></span>
+            </div>
+
+            <div class="campo-grupo">
+              <div class="campo">
+                <label class="campo-label" for="email">
+                  E-mail <span class="obrigatorio">*</span>
+                </label>
+                <p class="campo-ajuda">Informe um e-mail para contato.</p>
+                <input type="email" id="email" name="email"
+                       class="campo-input" required placeholder="seu@email.com">
+                <span class="campo-erro" id="erro-email"></span>
+              </div>
+
+              <div class="campo">
+                <label class="campo-label" for="telefone">
+                  Telefone / WhatsApp <span class="obrigatorio">*</span>
+                </label>
+                <p class="campo-ajuda">Informe seu número com DDD.</p>
+                <input type="tel" id="telefone" name="telefone"
+                       class="campo-input" required placeholder="(21) 99999-9999">
+                <span class="campo-erro" id="erro-telefone"></span>
+              </div>
+            </div>
+
+            <div class="campo">
+              <label class="campo-label" for="funcao">
+                Função <span class="obrigatorio">*</span>
+              </label>
+              <p class="campo-ajuda">Escolha sua função nesta atividade.</p>
+              <select id="funcao" name="funcao" class="campo-select" required>
+                <option value="">Selecione...</option>
+                <option value="Coordenador de núcleo">Coordenador de núcleo</option>
+                <option value="Coordenador de projeto">Coordenador de projeto</option>
+                <option value="Coordenador de programação">Coordenador de programação</option>
+                <option value="Oficineiro / Instrutor / Facilitador">Oficineiro / Instrutor / Facilitador</option>
+                <option value="Mobilizador">Mobilizador</option>
+                <option value="Assistente administrativo">Assistente administrativo</option>
+                <option value="Comunicação">Comunicação</option>
+                <option value="Produção">Produção</option>
+                <option value="Outro">Outro</option>
+              </select>
+              <span class="campo-erro" id="erro-funcao"></span>
+            </div>
+
+            <div class="campo-grupo">
+              <div class="campo">
+                <label class="campo-label" for="projeto">
+                  Projeto <span class="obrigatorio">*</span>
+                </label>
+                <p class="campo-ajuda">Escolha o projeto ao qual esta atividade pertence.</p>
+                <select id="projeto" name="projeto" class="campo-select" required>
+                  <option value="">Selecione...</option>
+                  <option value="CRIA HUB">CRIA HUB</option>
+                  <option value="NÓS EM REDE">NÓS EM REDE</option>
+                  <option value="PORTAS ABERTAS">PORTAS ABERTAS</option>
+                  <option value="PRÓSPERA RIO">PRÓSPERA RIO</option>
+                  <option value="ARTEMÍSIA">ARTEMÍSIA</option>
+                  <option value="OUTRO / A PREENCHER">OUTRO / A PREENCHER</option>
+                </select>
+                <span class="campo-erro" id="erro-projeto"></span>
+              </div>
+
+              <div class="campo">
+                <label class="campo-label" for="territorio_sede">
+                  Território / Sede <span class="obrigatorio">*</span>
+                </label>
+                <p class="campo-ajuda">Informe onde a atividade aconteceu. Se não houver território específico, marque "Não se aplica".</p>
+                <select id="territorio_sede" name="territorio_sede" class="campo-select" required>
+                  <option value="">Selecione...</option>
+                  <option value="Não se aplica">Não se aplica</option>
+                  <option value="Maré">Maré</option>
+                  <option value="Jacarezinho">Jacarezinho</option>
+                  <option value="A preencher">A preencher</option>
+                  <option value="Outro">Outro</option>
+                </select>
+                <span class="campo-erro" id="erro-territorio_sede"></span>
+              </div>
+            </div>
+
+            <div class="campo">
+              <label class="campo-label" for="competencia">
+                Competência de referência <span class="obrigatorio">*</span>
+              </label>
+              <p class="campo-ajuda">Escolha o mês de referência da atividade.</p>
+              <select id="competencia" name="competencia" class="campo-select" required>
+                <option value="">Selecione...</option>
+                <option value="2026-01">Janeiro / 2026</option>
+                <option value="2026-02">Fevereiro / 2026</option>
+                <option value="2026-03">Março / 2026</option>
+                <option value="2026-04">Abril / 2026</option>
+                <option value="2026-05">Maio / 2026</option>
+                <option value="2026-06">Junho / 2026</option>
+                <option value="2026-07">Julho / 2026</option>
+                <option value="2026-08">Agosto / 2026</option>
+                <option value="2026-09">Setembro / 2026</option>
+                <option value="2026-10">Outubro / 2026</option>
+                <option value="2026-11">Novembro / 2026</option>
+                <option value="2026-12">Dezembro / 2026</option>
+              </select>
+              <span class="campo-erro" id="erro-competencia"></span>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ==================================================== -->
+        <!-- BLOCO 2 — DADOS DA ATIVIDADE EXECUTADA               -->
+        <!-- ==================================================== -->
+        <section class="bloco">
+          <div class="bloco-header">
+            <span class="bloco-numero">2</span>
+            <h2 class="bloco-titulo">Dados da Atividade Executada</h2>
+          </div>
+          <div class="bloco-corpo">
+
+            <div class="campo-grupo">
+              <div class="campo">
+                <label class="campo-label" for="data_atividade">
+                  Data da atividade <span class="obrigatorio">*</span>
+                </label>
+                <p class="campo-ajuda">Informe o dia em que a atividade aconteceu.</p>
+                <input type="date" id="data_atividade" name="data_atividade"
+                       class="campo-input" required>
+                <span class="campo-erro" id="erro-data_atividade"></span>
+              </div>
+
+              <div class="campo">
+                <label class="campo-label" for="horario_inicio">Horário de início</label>
+                <p class="campo-ajuda">Informe a hora em que começou, se souber.</p>
+                <input type="time" id="horario_inicio" name="horario_inicio" class="campo-input">
+              </div>
+
+              <div class="campo">
+                <label class="campo-label" for="horario_termino">Horário de término</label>
+                <p class="campo-ajuda">Informe a hora em que terminou, se souber.</p>
+                <input type="time" id="horario_termino" name="horario_termino" class="campo-input">
+              </div>
+            </div>
+
+            <div class="campo">
+              <label class="campo-label" for="local">
+                Local de realização <span class="obrigatorio">*</span>
+              </label>
+              <p class="campo-ajuda">Escreva o local onde a atividade aconteceu. Exemplo: Galpão do Muro, Maré.</p>
+              <input type="text" id="local" name="local"
+                     class="campo-input" required placeholder="Nome e endereço do local">
+              <span class="campo-erro" id="erro-local"></span>
+            </div>
+
+            <div class="campo">
+              <label class="campo-label" for="nome_atividade">
+                Nome da atividade / oficina / aula / ação <span class="obrigatorio">*</span>
+              </label>
+              <p class="campo-ajuda">Escreva o nome da atividade. Exemplo: Oficina de IA para Empreendedores.</p>
+              <input type="text" id="nome_atividade" name="nome_atividade"
+                     class="campo-input" required placeholder="Nome da atividade">
+              <span class="campo-erro" id="erro-nome_atividade"></span>
+            </div>
+
+            <div class="campo-grupo">
+              <div class="campo">
+                <label class="campo-label" for="tipo_atividade">
+                  Tipo de atividade <span class="obrigatorio">*</span>
+                </label>
+                <p class="campo-ajuda">Escolha o tipo que mais combina com a atividade.</p>
+                <select id="tipo_atividade" name="tipo_atividade" class="campo-select" required>
+                  <option value="">Selecione...</option>
+                  <option value="Aula / Oficina / Curso">Aula / Oficina / Curso</option>
+                  <option value="Mobilização">Mobilização</option>
+                  <option value="Reunião">Reunião</option>
+                  <option value="Atendimento">Atendimento</option>
+                  <option value="Ação territorial">Ação territorial</option>
+                  <option value="Atividade administrativa">Atividade administrativa</option>
+                  <option value="Atividade de coordenação">Atividade de coordenação</option>
+                  <option value="Atividade de comunicação">Atividade de comunicação</option>
+                  <option value="Entrega de material">Entrega de material</option>
+                  <option value="Evento">Evento</option>
+                  <option value="Outra">Outra</option>
+                </select>
+                <span class="campo-erro" id="erro-tipo_atividade"></span>
+              </div>
+
+              <div class="campo">
+                <label class="campo-label" for="quantidade_participantes">
+                  Quantidade de participantes <span class="obrigatorio">*</span>
+                </label>
+                <p class="campo-ajuda">Informe quantas pessoas participaram. Se não souber, escreva "A confirmar".</p>
+                <input type="text" id="quantidade_participantes" name="quantidade_participantes"
+                       class="campo-input" required placeholder="Ex.: 25 ou A confirmar">
+                <span class="campo-erro" id="erro-quantidade_participantes"></span>
+              </div>
+            </div>
+
+            <div class="campo">
+              <label class="campo-label" for="rubrica_relacionada">Rubrica relacionada</label>
+              <p class="campo-ajuda">Se souber a rubrica, escreva aqui. Se não souber, deixe em branco. A equipe técnica classificará depois.</p>
+              <input type="text" id="rubrica_relacionada" name="rubrica_relacionada"
+                     class="campo-input" placeholder="Ex.: Coordenador de Programação ou deixe em branco">
+            </div>
+
+            <div class="campo">
+              <label class="campo-label" for="publico_alvo">
+                Público-alvo atendido <span class="obrigatorio">*</span>
+              </label>
+              <p class="campo-ajuda">
+                Descreva o <strong>perfil</strong> das pessoas que participaram — não o número.
+                Exemplos: <em>mulheres empreendedoras</em>, <em>jovens do território</em>,
+                <em>moradores da Maré</em>, <em>participantes inscritos na oficina</em>,
+                <em>equipe técnica do projeto</em>.
+                A <strong>quantidade</strong> de pessoas fica no campo "Quantidade de participantes".
+              </p>
+              <input type="text" id="publico_alvo" name="publico_alvo"
+                     class="campo-input" required placeholder="Perfil do público atendido (ex.: jovens do território)">
+              <span class="campo-erro" id="erro-publico_alvo"></span>
+            </div>
+
+            <div class="campo">
+              <label class="campo-label" for="descricao_atividade">
+                Descrição objetiva da atividade executada <span class="obrigatorio">*</span>
+              </label>
+              <p class="campo-ajuda">Explique em poucas linhas o que aconteceu, quem participou e qual foi a entrega realizada.</p>
+              <textarea id="descricao_atividade" name="descricao_atividade"
+                        class="campo-textarea" required rows="5"
+                        placeholder="Descreva a atividade: o que foi feito, como foi feito, quem participou e o que foi entregue."></textarea>
+              <span class="campo-erro" id="erro-descricao_atividade"></span>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ==================================================== -->
+        <!-- BLOCO 3 — EVIDÊNCIAS DA EXECUÇÃO                     -->
+        <!-- ==================================================== -->
+        <section class="bloco">
+          <div class="bloco-header">
+            <span class="bloco-numero">3</span>
+            <h2 class="bloco-titulo">Evidências da Execução</h2>
+          </div>
+          <div class="bloco-corpo">
+
+            <div class="aviso-evidencia">
+              Os campos de evidência <strong>não devem ficar em branco</strong>.
+              Cole o link quando existir. Escreva <strong>"Pendente"</strong> quando o documento ainda não estiver pronto.
+              Escreva <strong>"Não se aplica"</strong> quando aquele documento não fizer sentido para esta atividade.
+            </div>
+
+            <div class="campo">
+              <label class="campo-label" for="link_pasta_drive">
+                Link da pasta principal no Drive com as evidências <span class="obrigatorio">*</span>
+              </label>
+              <p class="campo-ajuda">Cole o link da pasta principal onde estão todos os arquivos desta atividade. Se não tiver ainda, escreva "Pendente".</p>
+              <input type="text" id="link_pasta_drive" name="link_pasta_drive"
+                     class="campo-input campo-evidencia" required
+                     placeholder="https://drive.google.com/... ou Pendente">
+              <span class="campo-erro" id="erro-link_pasta_drive"></span>
+            </div>
+
+            <div class="campo-grupo">
+              <div class="campo">
+                <label class="campo-label" for="link_fotos">
+                  Link das fotos <span class="obrigatorio">*</span>
+                </label>
+                <p class="campo-ajuda">Cole o link da pasta ou arquivo com as fotos. Se ainda não tiver, escreva "Pendente".</p>
+                <input type="text" id="link_fotos" name="link_fotos"
+                       class="campo-input campo-evidencia" required
+                       placeholder="Link das fotos ou Pendente">
+                <span class="campo-erro" id="erro-link_fotos"></span>
+              </div>
+
+              <div class="campo">
+                <label class="campo-label" for="link_videos">
+                  Link dos vídeos <span class="obrigatorio">*</span>
+                </label>
+                <p class="campo-ajuda">Cole o link dos vídeos. Se não tiver vídeo, escreva "Não se aplica". Se ainda vai enviar, escreva "Pendente".</p>
+                <input type="text" id="link_videos" name="link_videos"
+                       class="campo-input campo-evidencia" required
+                       placeholder="Link dos vídeos, Não se aplica ou Pendente">
+                <span class="campo-erro" id="erro-link_videos"></span>
+              </div>
+            </div>
+
+            <div class="campo-grupo">
+              <div class="campo">
+                <label class="campo-label" for="link_lista_presenca">
+                  Link da lista de presença <span class="obrigatorio">*</span>
+                </label>
+                <p class="campo-ajuda">Cole o link da lista de presença. Se a atividade não tiver lista, escreva "Não se aplica". Se ainda vai enviar, escreva "Pendente".</p>
+                <input type="text" id="link_lista_presenca" name="link_lista_presenca"
+                       class="campo-input campo-evidencia" required
+                       placeholder="Link da lista, Não se aplica ou Pendente">
+                <span class="campo-erro" id="erro-link_lista_presenca"></span>
+              </div>
+
+              <div class="campo">
+                <label class="campo-label" for="link_certificados">
+                  Link dos certificados <span class="obrigatorio">*</span>
+                </label>
+                <p class="campo-ajuda">Cole o link dos certificados. Se a atividade não gera certificado, escreva "Não se aplica". Se ainda vai enviar, escreva "Pendente".</p>
+                <input type="text" id="link_certificados" name="link_certificados"
+                       class="campo-input campo-evidencia" required
+                       placeholder="Link dos certificados, Não se aplica ou Pendente">
+                <span class="campo-erro" id="erro-link_certificados"></span>
+              </div>
+            </div>
+
+            <div class="campo-grupo">
+              <div class="campo">
+                <label class="campo-label" for="link_material_pedagogico">
+                  Link do material pedagógico <span class="obrigatorio">*</span>
+                </label>
+                <p class="campo-ajuda">Cole o link do material usado na atividade. Se não houver material, escreva "Não se aplica".</p>
+                <input type="text" id="link_material_pedagogico" name="link_material_pedagogico"
+                       class="campo-input campo-evidencia" required
+                       placeholder="Link do material ou Não se aplica">
+                <span class="campo-erro" id="erro-link_material_pedagogico"></span>
+              </div>
+
+              <div class="campo">
+                <label class="campo-label" for="link_card_divulgacao">
+                  Link do card de divulgação <span class="obrigatorio">*</span>
+                </label>
+                <p class="campo-ajuda">Cole o link do card de divulgação. Se não teve card, escreva "Não se aplica".</p>
+                <input type="text" id="link_card_divulgacao" name="link_card_divulgacao"
+                       class="campo-input campo-evidencia" required
+                       placeholder="Link do card ou Não se aplica">
+                <span class="campo-erro" id="erro-link_card_divulgacao"></span>
+              </div>
+            </div>
+
+            <div class="campo">
+              <label class="campo-label" for="link_relatorio_atividade">
+                Link do relatório da atividade
+              </label>
+              <p class="campo-ajuda">Se já existir um relatório da atividade, cole o link. Se não tiver, pode deixar em branco.</p>
+              <input type="text" id="link_relatorio_atividade" name="link_relatorio_atividade"
+                     class="campo-input"
+                     placeholder="Link do relatório (opcional)">
+            </div>
+
+            <div class="campo-grupo">
+              <div class="campo">
+                <label class="campo-label" for="link_prints_sistema">
+                  Link de prints de sistema ou comunicação <span class="obrigatorio">*</span>
+                </label>
+                <p class="campo-ajuda">Cole links de prints, mensagens, divulgações ou registros de comunicação. Se não tiver, escreva "Não se aplica".</p>
+                <input type="text" id="link_prints_sistema" name="link_prints_sistema"
+                       class="campo-input campo-evidencia" required
+                       placeholder="Link dos prints ou Não se aplica">
+                <span class="campo-erro" id="erro-link_prints_sistema"></span>
+              </div>
+
+              <div class="campo">
+                <label class="campo-label" for="outros_documentos">
+                  Outros documentos <span class="obrigatorio">*</span>
+                </label>
+                <p class="campo-ajuda">Cole outros links importantes. Se não houver outros documentos, escreva "Não se aplica".</p>
+                <input type="text" id="outros_documentos" name="outros_documentos"
+                       class="campo-input campo-evidencia" required
+                       placeholder="Outros links ou Não se aplica">
+                <span class="campo-erro" id="erro-outros_documentos"></span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ==================================================== -->
+        <!-- BLOCO 4 — VALIDAÇÃO MÍNIMA DAS EVIDÊNCIAS            -->
+        <!-- ==================================================== -->
+        <section class="bloco">
+          <div class="bloco-header">
+            <span class="bloco-numero">4</span>
+            <h2 class="bloco-titulo">Validação Mínima das Evidências</h2>
+          </div>
+          <div class="bloco-corpo">
+
+            <div class="campo-radio-grupo">
+              <label class="campo-label">A atividade possui fotos? <span class="obrigatorio">*</span></label>
+              <div class="radio-opcoes">
+                <label class="radio-opcao"><input type="radio" name="tem_fotos" value="Sim" required> Sim</label>
+                <label class="radio-opcao"><input type="radio" name="tem_fotos" value="Não"> Não</label>
+                <label class="radio-opcao"><input type="radio" name="tem_fotos" value="Não se aplica"> Não se aplica</label>
+              </div>
+              <span class="campo-erro" id="erro-tem_fotos"></span>
+            </div>
+
+            <div class="campo-radio-grupo">
+              <label class="campo-label">A atividade possui lista de presença? <span class="obrigatorio">*</span></label>
+              <div class="radio-opcoes">
+                <label class="radio-opcao"><input type="radio" name="tem_lista_presenca" value="Sim" required> Sim</label>
+                <label class="radio-opcao"><input type="radio" name="tem_lista_presenca" value="Não"> Não</label>
+                <label class="radio-opcao"><input type="radio" name="tem_lista_presenca" value="Não se aplica"> Não se aplica</label>
+              </div>
+              <span class="campo-erro" id="erro-tem_lista_presenca"></span>
+            </div>
+
+            <div class="campo-radio-grupo">
+              <label class="campo-label">A atividade possui relatório ou descrição da execução? <span class="obrigatorio">*</span></label>
+              <div class="radio-opcoes">
+                <label class="radio-opcao"><input type="radio" name="tem_relatorio_descricao" value="Sim" required> Sim</label>
+                <label class="radio-opcao"><input type="radio" name="tem_relatorio_descricao" value="Não"> Não</label>
+                <label class="radio-opcao"><input type="radio" name="tem_relatorio_descricao" value="Não se aplica"> Não se aplica</label>
+              </div>
+              <span class="campo-erro" id="erro-tem_relatorio_descricao"></span>
+            </div>
+
+            <div class="campo-radio-grupo">
+              <label class="campo-label">Os arquivos estão organizados por data? <span class="obrigatorio">*</span></label>
+              <div class="radio-opcoes">
+                <label class="radio-opcao"><input type="radio" name="arquivos_organizados_por_data" value="Sim" required> Sim</label>
+                <label class="radio-opcao"><input type="radio" name="arquivos_organizados_por_data" value="Não"> Não</label>
+                <label class="radio-opcao"><input type="radio" name="arquivos_organizados_por_data" value="Não se aplica"> Não se aplica</label>
+              </div>
+              <span class="campo-erro" id="erro-arquivos_organizados_por_data"></span>
+            </div>
+
+            <div class="campo-radio-grupo">
+              <label class="campo-label">O link do Drive está com acesso liberado? <span class="obrigatorio">*</span></label>
+              <div class="radio-opcoes">
+                <label class="radio-opcao"><input type="radio" name="link_drive_liberado" value="Sim" required> Sim</label>
+                <label class="radio-opcao"><input type="radio" name="link_drive_liberado" value="Não"> Não</label>
+                <label class="radio-opcao"><input type="radio" name="link_drive_liberado" value="Não sei"> Não sei</label>
+              </div>
+              <span class="campo-erro" id="erro-link_drive_liberado"></span>
+            </div>
+
+            <div class="campo-radio-grupo">
+              <label class="campo-label">Há alguma pendência documental? <span class="obrigatorio">*</span></label>
+              <div class="radio-opcoes">
+                <label class="radio-opcao"><input type="radio" name="ha_pendencia_documental" value="Sim" required> Sim</label>
+                <label class="radio-opcao"><input type="radio" name="ha_pendencia_documental" value="Não"> Não</label>
+                <label class="radio-opcao"><input type="radio" name="ha_pendencia_documental" value="Não sei"> Não sei</label>
+              </div>
+              <span class="campo-erro" id="erro-ha_pendencia_documental"></span>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ==================================================== -->
+        <!-- BLOCO 5 — OBSERVAÇÕES E INTERCORRÊNCIAS              -->
+        <!-- ==================================================== -->
+        <section class="bloco">
+          <div class="bloco-header">
+            <span class="bloco-numero">5</span>
+            <h2 class="bloco-titulo">Observações e Intercorrências</h2>
+          </div>
+          <div class="bloco-corpo">
+
+            <div class="campo-radio-grupo">
+              <label class="campo-label">Houve intercorrência? <span class="obrigatorio">*</span></label>
+              <p class="campo-ajuda">Marque "Sim" se algo de inesperado aconteceu durante ou antes da atividade.</p>
+              <div class="radio-opcoes">
+                <label class="radio-opcao"><input type="radio" name="houve_intercorrencia" value="Sim" required> Sim</label>
+                <label class="radio-opcao"><input type="radio" name="houve_intercorrencia" value="Não"> Não</label>
+              </div>
+              <span class="campo-erro" id="erro-houve_intercorrencia"></span>
+            </div>
+
+            <div class="campo-radio-grupo">
+              <label class="campo-label">A atividade foi remarcada ou alterada? <span class="obrigatorio">*</span></label>
+              <div class="radio-opcoes">
+                <label class="radio-opcao"><input type="radio" name="atividade_remarcada" value="Sim" required> Sim</label>
+                <label class="radio-opcao"><input type="radio" name="atividade_remarcada" value="Não"> Não</label>
+              </div>
+              <span class="campo-erro" id="erro-atividade_remarcada"></span>
+            </div>
+
+            <div class="campo-radio-grupo">
+              <label class="campo-label">A meta foi parcialmente cumprida? <span class="obrigatorio">*</span></label>
+              <div class="radio-opcoes">
+                <label class="radio-opcao"><input type="radio" name="meta_parcialmente_cumprida" value="Sim" required> Sim</label>
+                <label class="radio-opcao"><input type="radio" name="meta_parcialmente_cumprida" value="Não"> Não</label>
+                <label class="radio-opcao"><input type="radio" name="meta_parcialmente_cumprida" value="Não sei"> Não sei</label>
+                <label class="radio-opcao"><input type="radio" name="meta_parcialmente_cumprida" value="Não se aplica"> Não se aplica</label>
+              </div>
+              <span class="campo-erro" id="erro-meta_parcialmente_cumprida"></span>
+            </div>
+
+            <div class="campo">
+              <label class="campo-label" for="observacoes_gerais">Observações gerais</label>
+              <p class="campo-ajuda">Escreva qualquer observação importante sobre a atividade. Se não tiver, pode deixar em branco.</p>
+              <textarea id="observacoes_gerais" name="observacoes_gerais"
+                        class="campo-textarea" rows="4"
+                        placeholder="Observações adicionais (opcional)"></textarea>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ERRO GERAL -->
+        <div id="erro-geral" class="erro-geral" style="display:none;">
+          Verifique os campos destacados antes de enviar.
+        </div>
+
+        <!-- BOTÃO DE ENVIO -->
+        <div class="envio-area">
+          <p class="envio-lembrete">
+            Confirme que este envio representa <strong>uma única atividade</strong>.
+            Não misture oficinas, reuniões ou ações diferentes em um mesmo envio.
+          </p>
+          <button type="submit" id="btn-enviar" class="btn-enviar">
+            Enviar Evidências
+          </button>
+        </div>
+
+      </form>
+
+      <!-- MENSAGEM DE SUCESSO -->
+      <div id="msg-sucesso" class="msg-sucesso" style="display:none;">
+        <div class="msg-icone">&#10003;</div>
+        <h2 class="msg-titulo">Envio realizado com sucesso.</h2>
+        <p class="msg-texto">
+          As evidências foram registradas no sistema do Instituto BR Arte.
+          A equipe técnica realizará a triagem e classificação da atividade enviada.
+        </p>
+        <p class="msg-id" id="msg-id-atividade"></p>
+        <button class="btn-novo-envio" id="btn-novo-envio">Registrar outra atividade</button>
+      </div>
+
+      <!-- MENSAGEM DE ERRO -->
+      <div id="msg-erro-envio" class="msg-erro-envio" style="display:none;">
+        <div class="msg-icone-erro">&#33;</div>
+        <h2 class="msg-titulo-erro">Falha ao enviar.</h2>
+        <p class="msg-texto-erro" id="detalhe-erro-envio">
+          Ocorreu um erro ao enviar os dados. Verifique sua conexão e tente novamente.
+        </p>
+        <button class="btn-tentar-novamente" id="btn-tentar-novamente">Tentar novamente</button>
+      </div>
+
+    </div><!-- .form-wrapper -->
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>INSTITUTO BR ARTE — CNPJ: 26.757.702/0001-08</p>
+      <p>Sistema de Coleta de Evidências · v1.0 · Transferegov · MROSC</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
