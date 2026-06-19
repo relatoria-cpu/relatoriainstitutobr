@@ -123,19 +123,63 @@
                 Função <span class="obrigatorio">*</span>
               </label>
               <p class="campo-ajuda">Escolha sua função nesta atividade.</p>
-              <select id="funcao" name="funcao" class="campo-select" required>
-                <option value="">Selecione...</option>
-                <option value="Coordenador de núcleo">Coordenador de núcleo</option>
-                <option value="Coordenador de projeto">Coordenador de projeto</option>
-                <option value="Coordenador de programação">Coordenador de programação</option>
-                <option value="Oficineiro / Instrutor / Facilitador">Oficineiro / Instrutor / Facilitador</option>
-                <option value="Mobilizador">Mobilizador</option>
-                <option value="Assistente administrativo">Assistente administrativo</option>
-                <option value="Comunicação">Comunicação</option>
-                <option value="Produção">Produção</option>
-                <option value="Outro">Outro</option>
-              </select>
-              <span class="campo-erro" id="erro-funcao"></span>
+<select id="funcao" name="funcao" class="campo-select" required>
+  <option value="">Selecione...</option>
+
+  <option value="Gestão / Governança Documental">Gestão / Governança Documental</option>
+  <option value="Ponto focal de evidências">Ponto focal de evidências</option>
+  <option value="Responsável pelo envio de evidências">Responsável pelo envio de evidências</option>
+
+  <option value="Coordenador de núcleo">Coordenador de núcleo</option>
+  <option value="Coordenador de projeto">Coordenador de projeto</option>
+  <option value="Coordenador geral">Coordenador geral</option>
+  <option value="Coordenador pedagógico">Coordenador pedagógico</option>
+  <option value="Coordenador de programação">Coordenador de programação</option>
+  <option value="Coordenador de produção">Coordenador de produção</option>
+  <option value="Coordenador de comunicação">Coordenador de comunicação</option>
+
+  <option value="Oficineiro / Instrutor / Facilitador">Oficineiro / Instrutor / Facilitador</option>
+  <option value="Professor / Educador">Professor / Educador</option>
+  <option value="Palestrante">Palestrante</option>
+  <option value="Consultor / Assessor técnico">Consultor / Assessor técnico</option>
+
+  <option value="Mobilizador">Mobilizador</option>
+  <option value="Articulador territorial">Articulador territorial</option>
+  <option value="Assistente de mobilização">Assistente de mobilização</option>
+
+  <option value="Assistente administrativo">Assistente administrativo</option>
+  <option value="Apoio administrativo">Apoio administrativo</option>
+  <option value="Apoio operacional">Apoio operacional</option>
+  <option value="Logística / Infraestrutura">Logística / Infraestrutura</option>
+  <option value="Responsável por materiais / insumos">Responsável por materiais / insumos</option>
+
+  <option value="Comunicação">Comunicação</option>
+  <option value="Social media">Social media</option>
+  <option value="Assessoria de imprensa">Assessoria de imprensa</option>
+  <option value="Design / Criação gráfica">Design / Criação gráfica</option>
+
+  <option value="Audiovisual / Fotografia / Vídeo">Audiovisual / Fotografia / Vídeo</option>
+  <option value="Registro fotográfico">Registro fotográfico</option>
+  <option value="Registro videográfico">Registro videográfico</option>
+
+  <option value="Tecnologia / Suporte digital">Tecnologia / Suporte digital</option>
+  <option value="Operador de sistema / plataforma">Operador de sistema / plataforma</option>
+
+  <option value="Produção">Produção</option>
+  <option value="Assistente de produção">Assistente de produção</option>
+  <option value="Curadoria">Curadoria</option>
+
+  <option value="Monitoramento / Avaliação">Monitoramento / Avaliação</option>
+  <option value="Pesquisa / Diagnóstico">Pesquisa / Diagnóstico</option>
+
+  <option value="Acessibilidade / Libras / Audiodescrição">Acessibilidade / Libras / Audiodescrição</option>
+
+  <option value="Financeiro / Prestação de contas">Financeiro / Prestação de contas</option>
+  <option value="Jurídico / Contábil">Jurídico / Contábil</option>
+
+  <option value="Outro">Outro</option>
+</select>
+<span class="campo-erro" id="erro-funcao"></span>
             </div>
 
             <div class="campo-grupo">
@@ -145,13 +189,25 @@
                 </label>
                 <p class="campo-ajuda">Escolha o projeto ao qual esta atividade pertence.</p>
                 <select id="projeto" name="projeto" class="campo-select" required>
-                  <option value="">Selecione...</option>
-                  <option value="CRIA HUB">CRIA HUB</option>
-                  <option value="NÓS EM REDE">NÓS EM REDE</option>
-                  <option value="PORTAS ABERTAS">PORTAS ABERTAS</option>
-                  <option value="PRÓSPERA RIO">PRÓSPERA RIO</option>
-                  <option value="ARTEMÍSIA">ARTEMÍSIA</option>
-                  <option value="OUTRO / A PREENCHER">OUTRO / A PREENCHER</option>
+                 <option value="">Selecione...</option>
+                 <option value="NÓS EM REDE">NÓS EM REDE</option>
+                <option value="PORTAS ABERTAS">PORTAS ABERTAS</option>
+                <option value="QUALIFICA SE">QUALIFICA SE</option>
+                <option value="CRIA HUB">CRIA HUB</option>
+                <option value="ECONOMIA SOLIDÁRIA - JUNTOS!">ECONOMIA SOLIDÁRIA - JUNTOS!</option>
+                <option value="LABORATÓRIO RS">LABORATÓRIO RS</option>
+                <option value="LABORATÓRIO RJ">LABORATÓRIO RJ</option>
+                <option value="JOGANDO JUNTOS">JOGANDO JUNTOS</option>
+                <option value="AGENTES DE DIREITO">AGENTES DE DIREITO</option>
+                <option value="CONEXÃO EMPREENDEDORA">CONEXÃO EMPREENDEDORA</option>
+                <option value="NÓS EM REDE 2">NÓS EM REDE 2</option>
+               <option value="PROSPERA RJ">PROSPERA RJ</option>
+               <option value="PROSPERA RS">PROSPERA RS</option>
+              <option value="PROSPERA GO">PROSPERA GO</option>
+              <option value="JOGANDO JUNTOS SE">JOGANDO JUNTOS SE</option>
+              <option value="CONEXÕES CRIATIVAS">CONEXÕES CRIATIVAS</option>
+              <option value="PNCC">PNCC [PENDENTE]</option>
+              <option value="OUTRO / A PREENCHER">OUTRO / A PREENCHER</option>
                 </select>
                 <span class="campo-erro" id="erro-projeto"></span>
               </div>
@@ -162,13 +218,8 @@
                 </label>
                 <p class="campo-ajuda">Informe onde a atividade aconteceu. Se não houver território específico, marque "Não se aplica".</p>
                 <select id="territorio_sede" name="territorio_sede" class="campo-select" required>
-                  <option value="">Selecione...</option>
-                  <option value="Não se aplica">Não se aplica</option>
-                  <option value="Maré">Maré</option>
-                  <option value="Jacarezinho">Jacarezinho</option>
-                  <option value="A preencher">A preencher</option>
-                  <option value="Outro">Outro</option>
-                </select>
+  <option value="">Selecione primeiro o projeto</option>
+</select>
                 <span class="campo-erro" id="erro-territorio_sede"></span>
               </div>
             </div>
@@ -180,18 +231,42 @@
               <p class="campo-ajuda">Escolha o mês de referência da atividade.</p>
               <select id="competencia" name="competencia" class="campo-select" required>
                 <option value="">Selecione...</option>
-                <option value="2026-01">Janeiro / 2026</option>
-                <option value="2026-02">Fevereiro / 2026</option>
-                <option value="2026-03">Março / 2026</option>
-                <option value="2026-04">Abril / 2026</option>
-                <option value="2026-05">Maio / 2026</option>
-                <option value="2026-06">Junho / 2026</option>
-                <option value="2026-07">Julho / 2026</option>
-                <option value="2026-08">Agosto / 2026</option>
-                <option value="2026-09">Setembro / 2026</option>
-                <option value="2026-10">Outubro / 2026</option>
-                <option value="2026-11">Novembro / 2026</option>
-                <option value="2026-12">Dezembro / 2026</option>
+<option value="2025-01">Janeiro / 2025</option>
+<option value="2025-02">Fevereiro / 2025</option>
+<option value="2025-03">Março / 2025</option>
+<option value="2025-04">Abril / 2025</option>
+<option value="2025-05">Maio / 2025</option>
+<option value="2025-06">Junho / 2025</option>
+<option value="2025-07">Julho / 2025</option>
+<option value="2025-08">Agosto / 2025</option>
+<option value="2025-09">Setembro / 2025</option>
+<option value="2025-10">Outubro / 2025</option>
+<option value="2025-11">Novembro / 2025</option>
+<option value="2025-12">Dezembro / 2025</option>
+<option value="2026-01">Janeiro / 2026</option>
+<option value="2026-02">Fevereiro / 2026</option>
+<option value="2026-03">Março / 2026</option>
+<option value="2026-04">Abril / 2026</option>
+<option value="2026-05">Maio / 2026</option>
+<option value="2026-06">Junho / 2026</option>
+<option value="2026-07">Julho / 2026</option>
+<option value="2026-08">Agosto / 2026</option>
+<option value="2026-09">Setembro / 2026</option>
+<option value="2026-10">Outubro / 2026</option>
+<option value="2026-11">Novembro / 2026</option>
+<option value="2026-12">Dezembro / 2026</option>
+<option value="2027-01">Janeiro / 2027</option>
+<option value="2027-02">Fevereiro / 2027</option>
+<option value="2027-03">Março / 2027</option>
+<option value="2027-04">Abril / 2027</option>
+<option value="2027-05">Maio / 2027</option>
+<option value="2027-06">Junho / 2027</option>
+<option value="2027-07">Julho / 2027</option>
+<option value="2027-08">Agosto / 2027</option>
+<option value="2027-09">Setembro / 2027</option>
+<option value="2027-10">Outubro / 2027</option>
+<option value="2027-11">Novembro / 2027</option>
+<option value="2027-12">Dezembro / 2027</option>
               </select>
               <span class="campo-erro" id="erro-competencia"></span>
             </div>
@@ -258,22 +333,11 @@
                 <label class="campo-label" for="tipo_atividade">
                   Tipo de atividade <span class="obrigatorio">*</span>
                 </label>
-                <p class="campo-ajuda">Escolha o tipo que mais combina com a atividade.</p>
-                <select id="tipo_atividade" name="tipo_atividade" class="campo-select" required>
-                  <option value="">Selecione...</option>
-                  <option value="Aula / Oficina / Curso">Aula / Oficina / Curso</option>
-                  <option value="Mobilização">Mobilização</option>
-                  <option value="Reunião">Reunião</option>
-                  <option value="Atendimento">Atendimento</option>
-                  <option value="Ação territorial">Ação territorial</option>
-                  <option value="Atividade administrativa">Atividade administrativa</option>
-                  <option value="Atividade de coordenação">Atividade de coordenação</option>
-                  <option value="Atividade de comunicação">Atividade de comunicação</option>
-                  <option value="Entrega de material">Entrega de material</option>
-                  <option value="Evento">Evento</option>
-                  <option value="Outra">Outra</option>
-                </select>
-                <span class="campo-erro" id="erro-tipo_atividade"></span>
+                <p class="campo-ajuda">Escolha o tipo que mais combina com a atividade ou evidência registrada.</p>
+<select id="tipo_atividade" name="tipo_atividade" class="campo-select" required>
+  <option value="">Selecione primeiro o projeto</option>
+</select>
+<span class="campo-erro" id="erro-tipo_atividade"></span>
               </div>
 
               <div class="campo">
@@ -290,8 +354,9 @@
             <div class="campo">
               <label class="campo-label" for="rubrica_relacionada">Rubrica relacionada</label>
               <p class="campo-ajuda">Se souber a rubrica, escreva aqui. Se não souber, deixe em branco. A equipe técnica classificará depois.</p>
-              <input type="text" id="rubrica_relacionada" name="rubrica_relacionada"
-                     class="campo-input" placeholder="Ex.: Coordenador de Programação ou deixe em branco">
+              <select id="rubrica_relacionada" name="rubrica_relacionada" class="campo-select">
+  <option value="">Selecione primeiro o projeto</option>
+</select>
             </div>
 
             <div class="campo">
@@ -634,7 +699,9 @@
       <p>Sistema de Coleta de Evidências · v1.0 · Transferegov · MROSC</p>
     </div>
   </footer>
-
+  
+  <script src="script_dinamico.js"></script>
   <script src="script.js"></script>
+  <script src="script_atividades.js"></script>
 </body>
 </html>
