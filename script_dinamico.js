@@ -18,15 +18,21 @@ const TERRITORIOS_POR_PROJETO = {
     "A VALIDAR"
   ],
   "PORTAS ABERTAS": [
-    "Rio de Janeiro-RJ — 6 polos A VALIDAR",
+    "Anil-RJ",
     "Belford Roxo-RJ",
     "Petrópolis-RJ",
     "São Gonçalo-RJ",
+    "Bairro Carioca-RJ",
+    "Bangu-RJ",
+    "Complexo do Alemão-RJ",
+    "Jesuítas-RJ",
+    "Manguinhos-RJ",
     "GERAL",
     "A VALIDAR"
   ],
   "QUALIFICA SE": [
-    "Aracaju-SE — 2 polos técnicos A VALIDAR",
+    "Armazem dos Campos-SE",
+    "Santo Antônio-SE",
     "GERAL",
     "A VALIDAR"
   ],
