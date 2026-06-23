@@ -27,14 +27,13 @@ const TERRITORIOS_POR_PROJETO = {
     "Complexo do Alemão-RJ",
     "Jesuítas-RJ",
     "Manguinhos-RJ",
-    "GERAL",
-    "A VALIDAR"
+    "GERAL"
+    
   ],
   "QUALIFICA SE": [
     "Armazem dos Campos-SE",
     "Santo Antônio-SE",
-    "GERAL",
-    "A VALIDAR"
+    "GERAL"
   ],
   "CRIA HUB": [
     "Santa Cruz-RJ",
@@ -75,8 +74,8 @@ const TERRITORIOS_POR_PROJETO = {
     "Maré-RJ",
     "Bangu-RJ",
     "Triagem-RJ",
-    "GERAL",
-    "A VALIDAR"
+    "GERAL"
+    
   ],
   "AGENTES DE DIREITO": [
     "Fortaleza-CE — regiões A VALIDAR",
@@ -84,12 +83,13 @@ const TERRITORIOS_POR_PROJETO = {
     "A VALIDAR"
   ],
   "CONEXÃO EMPREENDEDORA": [
-    "São João de Meriti-RJ",
-    "Nova Iguaçu-RJ",
     "Arraial do Cabo-RJ",
+    "São João de Meriti I-RJ",
+    "São João de Meriti II-RJ",
+    "Nova Iguaçu I-RJ",
+    "Nova Iguaçu II-RJ",
     "Mangaratiba-RJ",
-    "GERAL",
-    "A VALIDAR"
+    "GERAL"
   ],
   "NÓS EM REDE 2": [
     "Rocinha-RJ",
@@ -101,7 +101,7 @@ const TERRITORIOS_POR_PROJETO = {
     "Maré-RJ",
     "Jacarezinho-RJ",
     "GERAL",
-    "A VALIDAR"
+    
   ],
   "PROSPERA RS": [
     "GERAL",
