@@ -134,6 +134,18 @@ const TERRITORIOS_POR_PROJETO = {
     "GERAL",
     "A VALIDAR"
   ],
+  "PROSPERA TURISMO": [
+  "Rocinha-RJ",
+  "Vidigal-RJ",
+  "Cantagalo-RJ",
+  "Complexo da Maré-RJ",
+  "Complexo do Alemão-RJ",
+  "Santa Marta-RJ",
+  "Chapéu Mangueira-RJ",
+  "Mangueira-RJ",
+  "GERAL",
+  "A VALIDAR"
+],
   "OUTRO / A PREENCHER": [
     "GERAL",
     "A VALIDAR",
@@ -586,6 +598,12 @@ const RUBRICAS_POR_PROJETO = {
     { v: "CC|16/2026/CC|RUB-000402|FAM-03|Atividades Formativas (Professor)", l: "CC — CONEXÕES CRIATIVAS — Atividades Formativas (Professor) — FAM-03 — RUB-000402 — 16/2026/CC" },
     { v: "CC|17/2026/CC|RUB-000403|FAM-12|Camisas para Identificação de Participantes", l: "CC — CONEXÕES CRIATIVAS — Camisas para Identificação de Participantes — FAM-12 — RUB-000403 — 17/2026/CC" },
   ],
+  "PROSPERA TURISMO": [
+  {
+    v: "PTUR|A_VALIDAR|A_VALIDAR|A_VALIDAR|A CLASSIFICAR PELA EQUIPE TÉCNICA",
+    l: "PTUR — PROSPERA TURISMO — Rubrica a definir após PT oficial — A CLASSIFICAR PELA EQUIPE TÉCNICA"
+  }
+],
   "OUTRO / A PREENCHER": [
     { v: "OUTRO|A_VALIDAR|A_VALIDAR|A_VALIDAR|A CLASSIFICAR PELA EQUIPE TÉCNICA", l: "A CLASSIFICAR PELA EQUIPE TÉCNICA" }
   ]
