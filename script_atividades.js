@@ -401,6 +401,21 @@ const ATIVIDADES_POR_PROJETO = {
     "Evidência geral da competência",
     "Outra / A classificar pela equipe técnica"
   ],
+  "PROSPERA TURISMO": [
+  "Diagnóstico socioterritorial / mapeamento de ativos turísticos",
+  "Consultoria individual de negócios / fomento ao empreendimento",
+  "Formação de Guia de Turismo Comunitário",
+  "Atividade formativa / capacitação técnica",
+  "Mobilização territorial / identificação de empreendimentos",
+  "Produção / organização de evento",
+  "Comunicação / divulgação",
+  "Coordenação / gerenciamento do projeto",
+  "Registro fotográfico / audiovisual",
+  "Apoio administrativo / organização documental",
+  "Reunião / alinhamento / planejamento da execução",
+  "Evidência geral da competência",
+  "Outra / A classificar pela equipe técnica"
+],
 
   // ----------------------------------------------------------
   // CONEXÕES CRIATIVAS — CC
